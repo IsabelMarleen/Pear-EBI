@@ -27,7 +27,7 @@ PEAR as a program
 Run `pear_ebi --help` to see the complete list of arguments and flags.
 ### Simple usage
 
-`pear_ebi examples_trees_sets/beast_trees/beast_run1.trees -m hashrf_RF`
+`pear_ebi examples_tree_sets/beast_trees/beast_run1.trees -m hashrf_RF`
 
 this script calculates the unweighted <a href='https://doi.org/10.1016/0025-5564(81)90043-2'>Robison Foulds</a> distances between the trees in the file "beast_run1.trees", which contains 1001 phylogenetic trees.
 
@@ -35,11 +35,11 @@ the flag *-m* indicates the method used to compute the dissimilarity between phy
 
 To embed these distances in a lower-dimensional space, we can use PCoA (MDS) or tSNE:
 
-`pear_ebi examples_trees_sets/beast_trees/beast_run1.trees -m hashrf_RF -pca 2`
+`pear_ebi examples_tree_sets/beast_trees/beast_run1.trees -m hashrf_RF -pca 2`
 
 we therefore embedded the distance matrix in 2 dimensions. Using the flag *-quality* one can assess the correlation between the distances in the N-dimensional space and in the embedding.
 
-`pear_ebi examples_trees_sets/beast_trees/beast_run1.trees -m hashrf_RF -pca 2 -plot`
+`pear_ebi examples_tree_sets/beast_trees/beast_run1.trees -m hashrf_RF -pca 2 -plot`
 
 The flag *-plot* indicates that PEAR has to plot the embeddings and show them, respectively. If an embedding method is specified the plots are produced anyway. Plotting doesn't require any indication on the number of dimensions as the embeddings are represented in 2 dimensions if the distances are embedded in 2 dimensions, while it plots on 2 and 3 dimensions in any other case.
 
